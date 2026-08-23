@@ -128,3 +128,5 @@ Port 80 was open, so the application was opened directly in the Firefox browser 
 | http://192.168.56.107/?page=login | Login form — Username and Password fields with Login button | Potential brute force, SQL injection | 🔴 HIGH |
 | http://192.168.56.107/?page=upload | Upload form — 'You must be logged in' (authentication required) | Authentication bypass possible | 🔴 CRITICAL |
 | http://192.168.56.107/upload/ | Upload directory listing — Apache directory indexing is ENABLED | Directory listing exposure | 🟠 HIGH |
+![nmap scan](/assets/img/network-scan/pwn_homepage.png "Pwnlab Home page")
+![nmap scan](/assets/img/network-scan/pwn_loginpage.png "Pwn login page")
