@@ -98,9 +98,9 @@ A comprehensive Nmap scan was launched using aggressive service detection, versi
 nmap -sS -A -T4 -oN nmap-scan.txt 192.168.56.107
 ```
 The scan revealed the following open ports and services:
-# Nmap Scan Results - Open Ports
+### Nmap Scan Results - Open Ports
 
-## Service Enumeration
+### Service Enumeration
 
 | Port | Protocol | Service | Version | Details |
 |------|----------|---------|---------|---------|
@@ -109,7 +109,7 @@ The scan revealed the following open ports and services:
 | **3306/tcp** | TCP | MySQL | MySQL 5.5.47 | - Remote database server<br>- Protocol version 10<br>- Thread ID: 52<br>- Potential weak credentials or SQL injection |
 | **100024/udp** | UDP | status | RPC #100024 | - RPC status service<br>- Information disclosure |
 
-## Attack Surface Analysis
+### Attack Surface Analysis
 
 | Service | Attack Vectors | Exploitation Potential |
 |---------|---------------|----------------------|
