@@ -27,7 +27,6 @@ establishment, and multi-stage lateral movement through three user accounts (www
 ## Procedure
 ### Step 1: Identify the Network (Reconnaissance)
 ## First, Host Discovery with net discover  
-
 The attacker first confirmed their own IP address by running ifconfig on the Kali machine. The 
 eth1 interface was assigned 192.168.56.104/24 on the Host-Only network. With the network range 
 known, net discover was used to perform passive ARP scanning:
@@ -40,4 +39,4 @@ net discover
 ## Connectivity Check (Ping)
 Before launching a full port scan, a standard ICMP ping test was performed to confirm the target 
 was online and responsive: 
-
+![nmap scan](/assets/img/network-scan/nmap_scan.png)
