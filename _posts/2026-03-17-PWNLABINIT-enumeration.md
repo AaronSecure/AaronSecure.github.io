@@ -81,8 +81,12 @@ net discover
 ```
 ### Scanning for IP of pwnlab using net discover
 ![Scanning for IP of pwnlab using netdicover](/assets/img/network-scan/net_discover.png)
+The scan returned three live hosts. The target was identified by its MAC vendor (PCS Systemtechnik GmbH the VirtualBox vendor signature) at IP 192.168.56.107: 
+Note: The method I used to find the IP is by opening my attacking machine scan with netdiscover then after it finished scanning the existing IP I now turned on the pwnlab machine and the IP pop up.
 
 ### 3.2 Connectivity Check (Ping)
 Before launching a full port scan, a standard ICMP ping test was performed to confirm the target 
 was online and responsive: 
 ![nmap scan](/assets/img/network-scan/Ping_target_ip.png)
+The scan returned three live hosts. The target was identified by its MAC vendor (PCS Systemtechnik GmbH the VirtualBox vendor signature) at IP 192.168.56.107: 
+Note: The method I used to find the IP is by opening my attacking machine scan with netdiscover then after it finished scanning the existing IP I now turned on the pwnlab machine and the IP pop up.
