@@ -72,17 +72,17 @@ one Host-Only for direct communication and one NAT for internet access.
 # Procedure
 ## 3. Reconnaissance 
 ### 3.1 Host Discovery with net discover 
-### Step 1: Identify the Network (Reconnaissance) 
+#### Step 1: Identify the Network (Reconnaissance) 
 The attacker first confirmed their own IP address by running ifconfig on the Kali machine. The 
 eth1 interface was assigned 192.168.56.104/24 on the Host-Only network. With the network range 
 known, net discover was used to perform passive ARP scanning:
 ```bash
 net discover
 ```
-## Scanning for IP of pwnlab using net discover
+### Scanning for IP of pwnlab using net discover
 ![Scanning for IP of pwnlab using netdicover](/assets/img/network-scan/net_discover.png)
 
-## Connectivity Check (Ping)
+### 3.2 Connectivity Check (Ping)
 Before launching a full port scan, a standard ICMP ping test was performed to confirm the target 
 was online and responsive: 
 ![nmap scan](/assets/img/network-scan/Ping_target_ip.png)
