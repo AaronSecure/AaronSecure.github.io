@@ -39,4 +39,4 @@ net discover
 ## Connectivity Check (Ping)
 Before launching a full port scan, a standard ICMP ping test was performed to confirm the target 
 was online and responsive: 
-![nmap scan](/assets/img/network-scan/nmap_scan.png)
+![nmap scan](/assets/img/network-scan/Ping_target_ip.png)
