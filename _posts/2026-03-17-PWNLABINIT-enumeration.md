@@ -43,7 +43,9 @@ Total Findings: **7**
 - Target Machine: Debian GNU/Linux (192.168.56.107)
 - Network: Oracle VirtualBox — Host-Only / NAT Network 
 - Tools Used: Nmap, net discover, Nikto, Burp Suite, CyberChef, MySQL CLI, php-reverse-shell, Netcat (nc), Python pty, vim  
-## Network Topology
+### 2. Scope and Environment
+## 2.1 Network Topology
+
 Both machines were hosted inside Oracle VirtualBox. The target machine was configured with a 
 Host-Only Adapter (isolating it from the internet), while the attacking machine had two adapters 
 one Host-Only for direct communication and one NAT for internet access. 
