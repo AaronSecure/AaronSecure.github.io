@@ -25,10 +25,13 @@ establishment, and multi-stage lateral movement through three user accounts (www
 - Tools Used: Nmap, net discover, Nikto, Burp Suite, CyberChef, MySQL CLI, php-reverse-shell, Netcat (nc), Python pty, vim  
 
 ## Procedure
-
 ### Step 1: Identify the Network (Reconnaissance)
+## First, Host Discovery with net discover  
 
-First, I checked my network interfaces:
-
+The attacker first confirmed their own IP address by running ifconfig on the Kali machine. The 
+eth1 interface was assigned 192.168.56.104/24 on the Host-Only network. With the network range 
+known, net discover was used to perform passive ARP scanning:
 ```bash
-ip a
+net discover
+```
+
