@@ -81,6 +81,7 @@ net discover
 ```
 ### Scanning for IP of pwnlab using net discover
 ![Scanning for IP of pwnlab using netdicover](/assets/img/network-scan/net_discover.png)
+*Figure 1 Scanning for IP of pwnlab using netdicover*
 The scan returned three live hosts. The target was identified by its MAC vendor (PCS Systemtechnik GmbH the VirtualBox vendor signature) at IP 192.168.56.107: 
 Note: The method I used to find the IP is by opening my attacking machine scan with netdiscover then after it finished scanning the existing IP I now turned on the pwnlab machine and the IP pop up.
 
@@ -88,6 +89,7 @@ Note: The method I used to find the IP is by opening my attacking machine scan w
 Before launching a full port scan, a standard ICMP ping test was performed to confirm the target 
 was online and responsive: 
 ![nmap scan](/assets/img/network-scan/Ping_target_ip.png)
+*Figure 2 Ping the target ip*
 All four packets were returned with 0% packet loss, confirming the machine is alive and responsive.
 
 ## 4. Enumeration
@@ -119,7 +121,7 @@ The scan revealed the following open ports and services:
 | **status (100024/udp)** | - Service enumeration<br>- Information leakage | 🟢 LOW |
 
 ![nmap scan](/assets/img/network-scan/nmap_scan.png)
-
+*Figure 3 Doing an nmap scan*
 ### 4.2 Web Application Discovery (Browser Enumeration)
 Port 80 was open, so the application was opened directly in the Firefox browser on the Kali machine. The site presented a simple intranet image hosting portal branded as "PWNLAB" with three navigation links: Home, Login, and Upload.
 | Page / URL | Observation | Security Issue | Priority |
@@ -130,6 +132,8 @@ Port 80 was open, so the application was opened directly in the Firefox browser 
 | http://192.168.56.107/upload/ | Upload directory listing — Apache directory indexing is ENABLED | Directory listing exposure | 🟠 HIGH |
 
 ![nmap scan](/assets/img/network-scan/pwn_homepage.png "Pwnlab Home page")
-
-*Figure 9 Pwn login page*
+*Figure 4 Pwnlab Home page*
 ![nmap scan](/assets/img/network-scan/pwn_loginpage.png "Pwn login page")
+*Figure 5 Pwn login page*
+![nmap scan](/assets/img/network-scan/pwn_uploadpage.png "pwn_uploadpage")
+*Figure 6 Pwn Upload page*
