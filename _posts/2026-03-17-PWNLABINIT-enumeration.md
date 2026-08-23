@@ -146,7 +146,7 @@ Nikto was run against the web server to identify common misconfigurations and vu
 ```bash
 nikto -h http://192.168.56.107
 ```
-![Nikto Web Vulnerability Scan](/assets/img/NIkto_Web_Vulner_Scan.png "Nikto Web Vulnerability Scan")
+![Nikto Web Vulnerability Scan](assets/img/network-scan/NIkto_WebVulnerScan.png "Nikto Web Vulnerability Scan")
 *Figure 8 Nikto Web Vulnerability Scan*
 
 #### *Key findings reported by Nikto included:*
