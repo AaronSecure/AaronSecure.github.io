@@ -34,5 +34,5 @@ known, net discover was used to perform passive ARP scanning:
 ```bash
 net discover
 ```
-## Scanning for IP of pwnlab using netdicover
+## Scanning for IP of pwnlab using netdiscover
 ![Scanning for IP of pwnlab using netdicover](/assets/img/network-scan/net_discover.png)
