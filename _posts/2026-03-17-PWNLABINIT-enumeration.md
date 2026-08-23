@@ -117,3 +117,5 @@ The scan revealed the following open ports and services:
 | **rpcbind (111/tcp)** | - RPC enumeration<br>- NFS exposure<br>- Information disclosure | 🟡 MEDIUM |
 | **MySQL (3306/tcp)** | - Weak credentials<br>- SQL injection<br>- Remote database access<br>- Privilege escalation | 🔴 HIGH |
 | **status (100024/udp)** | - Service enumeration<br>- Information leakage | 🟢 LOW |
+
+![nmap scan](/assets/img/network-scan/nmap_scan.png)
