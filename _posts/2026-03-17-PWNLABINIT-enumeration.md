@@ -89,3 +89,31 @@ Before launching a full port scan, a standard ICMP ping test was performed to co
 was online and responsive: 
 ![nmap scan](/assets/img/network-scan/Ping_target_ip.png)
 All four packets were returned with 0% packet loss, confirming the machine is alive and responsive.
+
+## 4. Enumeration
+### 4.1 Nmap Full Port Scan
+A comprehensive Nmap scan was launched using aggressive service detection, version scanning, OS detection, and script scanning. Results were saved to a file for reference:
+#### Command
+```bash
+nmap -sS -A -T4 -oN nmap-scan.txt 192.168.56.107
+```
+The scan revealed the following open ports and services:
+# Nmap Scan Results - Open Ports
+
+## Service Enumeration
+
+| Port | Protocol | Service | Version | Details |
+|------|----------|---------|---------|---------|
+| **80/tcp** | TCP | HTTP | Apache 2.4.10 | - Web server running on Debian<br>- PwnLab Intranet Image Hosting<br>- Potential LFI, RFI, file upload vulnerabilities |
+| **111/tcp** | TCP | rpcbind | RPC #100000 | - RPC service versions 2,3,4<br>- May expose NFS or other RPC services |
+| **3306/tcp** | TCP | MySQL | MySQL 5.5.47 | - Remote database server<br>- Protocol version 10<br>- Thread ID: 52<br>- Potential weak credentials or SQL injection |
+| **100024/udp** | UDP | status | RPC #100024 | - RPC status service<br>- Information disclosure |
+
+## Attack Surface Analysis
+
+| Service | Attack Vectors | Exploitation Potential |
+|---------|---------------|----------------------|
+| **HTTP (80/tcp)** | - LFI/RFI<br>- File upload bypass<br>- Directory traversal<br>- Outdated Apache exploits | 🔴 CRITICAL |
+| **rpcbind (111/tcp)** | - RPC enumeration<br>- NFS exposure<br>- Information disclosure | 🟡 MEDIUM |
+| **MySQL (3306/tcp)** | - Weak credentials<br>- SQL injection<br>- Remote database access<br>- Privilege escalation | 🔴 HIGH |
+| **status (100024/udp)** | - Service enumeration<br>- Information leakage | 🟢 LOW |
