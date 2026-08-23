@@ -35,10 +35,12 @@ establishment, and multi-stage lateral movement through three user accounts (www
 Both machines were hosted inside Oracle VirtualBox. The target machine was configured with a 
 Host-Only Adapter (isolating it from the internet), while the attacking machine had two adapters 
 one Host-Only for direct communication and one NAT for internet access. 
-| Left Align | Center Align | Right Align |
-|:-----------|:------------:|------------:|
-| Left       | Center       | Right       |
-| Text       | Text         | Text        |
+# Lab Network Configuration
+
+| Machine | Role | IP Address | Network | Adapter Type |
+|---------|------|------------|---------|--------------|
+| Ethical-Hacker-Kali | 🟢 Attacker | 192.168.56.104 | 192.168.56.0/24 | Host-Only (eth1) + NAT (eth0) |
+| PwnLab VM (vm) | 🔴 Target | 192.168.56.107 | 192.168.56.0/24 | Host-Only Adapter Only |
 ## Procedure
 ### Step 1: Identify the Network (Reconnaissance)
 ## First, Host Discovery with net discover  
