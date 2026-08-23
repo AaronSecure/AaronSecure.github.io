@@ -139,3 +139,31 @@ Port 80 was open, so the application was opened directly in the Firefox browser 
 *Figure 6 Pwn Upload page*
 ![nmap scan](/assets/img/network-scan/upload_dir.png "upload directory")
 *Figure 7 Upload directory*
+
+### 4.3 Nikto Web Vulnerability Scan
+Nikto was run against the web server to identify common misconfigurations and vulnerabilities automatically:
+#### Command
+```bash
+nikto -h http://192.168.56.107
+```
+![nmap scan](/assets/img/NIkto_Web_Vulner_Scan.png "Nikto Web Vulnerability Scan")
+*Figure 8 Nikto Web Vulnerability Scan*
+
+#### *Key findings reported by Nikto included:*
+•	Missing X-Frame-Options header — potential Clickjacking risk.
+•	Missing X-Content-Type-Options header — MIME sniffing vulnerability.
+•	Apache/2.4.10 is outdated — End-of-Life with known CVEs (minimum 2.4.54 recommended at time of scan).
+•	No CGI directories found.
+•	/login.php — PHPSESSID cookie created without the HttpOnly flag (session hijacking risk).
+•	/config.php — identified as a PHP config file that may contain database IDs and passwords.
+•	/#wp-config.php# — file found, noted as containing credentials.
+•	8102 requests completed; 12 items reported.
+
+## 5. Exploitation Phase 1 Local File Inclusion (LFI)
+### 5.1 Identifying the LFI Vulnerability
+The URL structure of the web application used a GET parameter called "page" to load PHP files:
+#### URL Pattern
+```bash
+http://192.168.56.107/?page=login
+```
+This pattern is a classic indicator of a potential Local File Inclusion vulnerability. The application appeared to use include () or require () in PHP to dynamically load page files based on the "page" parameter value. Burp Suite was opened to intercept and inspect the HTTP requests to the login, home, and upload pages. The request headers were examined and the cookie structure was noted.
