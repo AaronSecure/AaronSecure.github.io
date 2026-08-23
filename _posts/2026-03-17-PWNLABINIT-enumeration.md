@@ -119,3 +119,12 @@ The scan revealed the following open ports and services:
 | **status (100024/udp)** | - Service enumeration<br>- Information leakage | 🟢 LOW |
 
 ![nmap scan](/assets/img/network-scan/nmap_scan.png)
+
+### 4.2 Web Application Discovery (Browser Enumeration)
+Port 80 was open, so the application was opened directly in the Firefox browser on the Kali machine. The site presented a simple intranet image hosting portal branded as "PWNLAB" with three navigation links: Home, Login, and Upload.
+| Page / URL | Observation | Security Issue | Priority |
+|------------|-------------|----------------|----------|
+| http://192.168.56.107/ | Home page — message: 'Use this server to upload and share image files inside the intranet' | Information disclosure | 🟢 LOW |
+| http://192.168.56.107/?page=login | Login form — Username and Password fields with Login button | Potential brute force, SQL injection | 🔴 HIGH |
+| http://192.168.56.107/?page=upload | Upload form — 'You must be logged in' (authentication required) | Authentication bypass possible | 🔴 CRITICAL |
+| http://192.168.56.107/upload/ | Upload directory listing — Apache directory indexing is ENABLED | Directory listing exposure | 🟠 HIGH |
