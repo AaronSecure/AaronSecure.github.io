@@ -16,14 +16,29 @@ enumeration through Local File Inclusion (LFI) exploitation, PHP filter wrapper 
 extraction from a MySQL database, web shell upload via MIME-type bypass, reverse shell 
 establishment, and multi-stage lateral movement through three user accounts (www-data → kane 
 → mike) before achieving root-level access via a SUID binary exploitation technique. 
-
+| Category | Finding | Severity |
+|----------|---------|----------|
+| Web Application | Local File Inclusion (LFI) | CRITICAL |
+| Authentication | Hardcoded DB Credentials in PHP | HIGH |
+| File Upload | MIME-Type Bypass (PHP Shell) | CRITICAL |
+| Database | Weak MD5 Hashed Passwords | HIGH |
+| Privilege Escalation | SUID Binary (msg2root) | CRITICAL |
+| Privilege Escalation | Lateral Movement via su kane | HIGH |
+| OS Hardening | Outdated Apache 2.4.10 | MEDIUM |
 ## Lab Environment
 
 - Attacker Machine: Kali Linux(192.168.56.104 )
 - Target Machine: Debian GNU/Linux (192.168.56.107)
 - Network: Oracle VirtualBox — Host-Only / NAT Network 
 - Tools Used: Nmap, net discover, Nikto, Burp Suite, CyberChef, MySQL CLI, php-reverse-shell, Netcat (nc), Python pty, vim  
-
+## Network Topology
+Both machines were hosted inside Oracle VirtualBox. The target machine was configured with a 
+Host-Only Adapter (isolating it from the internet), while the attacking machine had two adapters 
+one Host-Only for direct communication and one NAT for internet access. 
+| Left Align | Center Align | Right Align |
+|:-----------|:------------:|------------:|
+| Left       | Center       | Right       |
+| Text       | Text         | Text        |
 ## Procedure
 ### Step 1: Identify the Network (Reconnaissance)
 ## First, Host Discovery with net discover  
