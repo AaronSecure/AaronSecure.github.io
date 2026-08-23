@@ -130,4 +130,6 @@ Port 80 was open, so the application was opened directly in the Firefox browser 
 | http://192.168.56.107/upload/ | Upload directory listing — Apache directory indexing is ENABLED | Directory listing exposure | 🟠 HIGH |
 
 ![nmap scan](/assets/img/network-scan/pwn_homepage.png "Pwnlab Home page")
+
+*Figure 9 Pwn login page*
 ![nmap scan](/assets/img/network-scan/pwn_loginpage.png "Pwn login page")
