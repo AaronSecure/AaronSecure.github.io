@@ -137,3 +137,5 @@ Port 80 was open, so the application was opened directly in the Firefox browser 
 *Figure 5 Pwn login page*
 ![nmap scan](/assets/img/network-scan/pwn_uploadpage.png "pwn_uploadpage")
 *Figure 6 Pwn Upload page*
+![nmap scan](/assets/img/network-scan/upload_dir.png "upload directory")
+*Figure 7 Upload directory*
