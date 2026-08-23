@@ -67,6 +67,8 @@ one Host-Only for direct communication and one NAT for internet access.
 | 🗄️ MySQL CLI | Remote database access and credential harvesting |
 | 💻 php-reverse-shell | PHP web shell to establish a reverse TCP connection |
 | 📡 Netcat (nc) | TCP listener for catching the incoming reverse shell |
+| 🐍 Python pty | TTY shell upgrade from dumb shell to interactive bash |
+| ✏️ vim | Text editor to configure shell payload before upload |
 ## Procedure
 ### Step 1: Identify the Network (Reconnaissance)
 ## First, Host Discovery with net discover  
