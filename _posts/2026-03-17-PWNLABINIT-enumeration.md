@@ -36,3 +36,8 @@ net discover
 ```
 ## Scanning for IP of pwnlab using net discover
 ![Scanning for IP of pwnlab using netdicover](/assets/img/network-scan/net_discover.png)
+
+## Connectivity Check (Ping)
+Before launching a full port scan, a standard ICMP ping test was performed to confirm the target 
+was online and responsive: 
+
