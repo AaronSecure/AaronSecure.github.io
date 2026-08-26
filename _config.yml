@@ -1,7 +1,5 @@
 # The Site Configuration
 
-theme: jekyll-theme-chirpy
-
 lang: en
 
 timezone: Africa/Nairobi
@@ -136,8 +134,12 @@ pwa:
 
 paginate: 10
 
-# The base URL of your site
-baseurl: ""
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-include-cache
 
 # ------------ The following options are not recommended to be modified ------------------
 
