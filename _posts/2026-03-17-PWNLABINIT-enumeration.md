@@ -4,7 +4,7 @@ date: 2026-03-17 10:00:00 +0300
 categories: [Cybersecurity, Binary Exploitation]
 tags: [Integer Overflow to Buffer Overflow, Memory Corruption, Software Flaw]
 image:
-  path: /assets/img/network-scan/pwnlab.jpg
+  path: ![image of lab cover page.](/assets/img/network-scan/pwnlab.jpg)
   alt: image of lab cover page.
 ---
 
