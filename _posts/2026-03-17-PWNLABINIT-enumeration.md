@@ -3,6 +3,9 @@ title: PWNLAB_INIT
 date: 2026-03-17 10:00:00 +0300
 categories: [Cybersecurity, Web Exploitation]
 tags: [pwnlab, lfi, file-upload, privilege-escalation, pentest]
+image:
+path: assets/img/kioptrix-5/KIOP5FREEBSD.jpg
+alt: Kioprix 5 FREE BSD
 ---
 
 ## 1. Executive Summary
