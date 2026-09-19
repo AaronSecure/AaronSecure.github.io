@@ -1,5 +1,8 @@
 # The Site Configuration
 
+# Required so head.html resolves the theme CSS path (assets/css/jekyll-theme-chirpy.css)
+theme: jekyll-theme-chirpy
+
 lang: en
 
 timezone: Africa/Nairobi

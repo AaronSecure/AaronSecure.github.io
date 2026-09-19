@@ -87,7 +87,11 @@
   {% endunless %}
 
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
+  {% assign theme_name = site.theme | default: 'jekyll-theme-chirpy' %}
+  {% if theme_name == '' %}
+    {% assign theme_name = 'jekyll-theme-chirpy' %}
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', theme_name | relative_url }}">
 
   <!-- Web Font -->
   <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | relative_url }}">
