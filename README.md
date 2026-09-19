@@ -42,6 +42,17 @@ End-to-end penetration test of the PwnLab: init CTF target, from unauthenticated
 
 **Tools used:** Nmap, Burp Suite, Nikto, Netcat, MySQL CLI, CyberChef
 
+### [Kioptrix 5 — FreeBSD Compromise](https://aaronsecure.github.io/posts/kioptrix-5-penetration-test/)
+
+End-to-end penetration test of Kioptrix Level 5, from host discovery through root on FreeBSD 9.0:
+
+- Hidden pChart 2.1.3 application behind a default Apache page
+- Directory traversal / LFI for system file disclosure
+- phptax on port 8080 and a `www` foothold
+- Local privilege escalation on an end-of-life FreeBSD kernel
+
+**Tools used:** Netdiscover, Nmap, Burp Suite, curl, Metasploit, Netcat, searchsploit
+
 ## Tech Stack
 
 | Layer | Tools |
