@@ -1,83 +1,99 @@
-<!-- markdownlint-disable-next-line -->
+# Aaron's Security Lab
+
 <div align="center">
 
-  <!-- markdownlint-disable-next-line -->
-  # Chirpy Jekyll Theme
+![AaronSecure logo](./assets/img/favicons/logomaster.png)
 
-  A minimal, responsive, and feature-rich Jekyll theme for technical writing.
+**Cybersecurity · Networking · Digital Forensics**
 
-  [![CI](https://img.shields.io/github/actions/workflow/status/cotes2020/jekyll-theme-chirpy/ci.yml?logo=github)][ci]&nbsp;
-  [![Codacy Badge](https://img.shields.io/codacy/grade/4e556876a3c54d5e8f2d2857c4f43894?logo=codacy)][codacy]&nbsp;
-  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy?color=goldenrod)][license]&nbsp;
-  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?&logo=RubyGems&logoColor=ghostwhite&label=gem&color=orange)][gem]&nbsp;
-  [![Open in Dev Containers](https://img.shields.io/badge/Dev_Containers-Open-deepskyblue?logo=linuxcontainers)][open-container]
-
-  [**Live Demo** →][demo]
-
-  [![Devices Mockup](https://chirpy-img.netlify.app/commons/devices-mockup.png)][demo]
+[![Live Site](https://img.shields.io/badge/Live_Site-aaronsecure.github.io-0ea5e9?style=for-the-badge&logo=githubpages&logoColor=white)](https://aaronsecure.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-AaronSecure-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AaronSecure)
+[![Email](https://img.shields.io/badge/Email-ituraaron77@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ituraaron77@gmail.com)
 
 </div>
 
-## Features
+---
 
-- **Design & UX** - Responsive layout, Dark/Light modes, Localized UI language,
-  and Dark mode images.
-- **Content Management** - Pinned posts, Hierarchical categories, Trending tags,
-  Auto-generated Table of Contents, and Last modified dates.
-- **Rich Text Support** - Syntax highlighting, Mathematical expressions, Mermaid
-  diagrams & flowcharts, and Embedded media.
-- **Interactivity & Outreach** - Built-in search, Multiple comment systems, and
-  Atom feeds.
-- **System & Optimization** - PWA support, integrated Web analytics, and
-  advanced SEO performance.
+## About
 
-## Documentation
+This repository powers my personal security portfolio and technical blog — **Aaron's Security Lab**. It documents hands-on labs, penetration testing write-ups, networking experiments, and digital forensics research in a clean, searchable format.
 
-To learn how to use, develop, and upgrade the project, please refer to the
-[Wiki][wiki].
+I'm **Aaron Itur**, a cybersecurity practitioner focused on turning lab work into clear, reproducible documentation that shows both methodology and results.
 
-## Contributing
+## Focus Areas
 
-Contributions (_pull requests_, _issues_, and _discussions_) are what make the
-open-source community such an amazing place to learn, inspire, and create. Any
-contributions you make are greatly appreciated.
-For details, please refer to our [Contributing Guidelines][contribute-guide].
+| Area | What I Document |
+|------|-----------------|
+| **Cybersecurity** | Penetration testing, vulnerability analysis, privilege escalation, CTF walkthroughs |
+| **Networking** | Host discovery, scanning, network topology mapping, service enumeration |
+| **Digital Forensics** | Evidence handling, analysis workflows, and investigative reporting |
 
-## Credits
+## Featured Work
 
-### Contributors
+### [PWNLAB_INIT — Full System Compromise](https://aaronsecure.github.io/posts/PWNLABINIT-enumeration/)
 
-Thanks to [all the contributors][contributors] involved in the development of
-the project!
+End-to-end penetration test of the PwnLab: init CTF target, from unauthenticated web enumeration through root access:
 
-[![all-contributors](https://contrib.rocks/image?repo=cotes2020/jekyll-theme-chirpy&columns=16&max=112)][contributors]
-<sub> — Made with [contrib.rocks](https://contrib.rocks)</sub>
+- Local File Inclusion (LFI) and PHP filter abuse
+- Credential extraction from MySQL
+- Web shell upload via MIME-type bypass
+- Lateral movement across user accounts
+- SUID binary exploitation for root
 
-### Third-Party Assets
+**Tools used:** Nmap, Burp Suite, Nikto, Netcat, MySQL CLI, CyberChef
 
-This project is built on the [Jekyll][jekyllrb] ecosystem and integrates several
-[great libraries][lib]. It is developed using [VS Code][vscode] and tools
-provided by [JetBrains][jetbrains] under a non-commercial open-source software
-license.
+## Tech Stack
 
-The avatar and favicon for the project's website are sourced from
-[ClipartMAX][clipartmax].
+| Layer | Tools |
+|-------|-------|
+| **Site generator** | [Jekyll](https://jekyllrb.com/) 4.x |
+| **Theme** | [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 7.x |
+| **Hosting** | [GitHub Pages](https://pages.github.com/) |
+| **CI/CD** | GitHub Actions (`.github/workflows/pages-deploy.yml`) |
+| **Assets** | Node.js build pipeline (Rollup, PurgeCSS) |
+
+## Project Structure
+
+```text
+├── _posts/              # Lab reports and blog posts
+├── _tabs/               # Static pages (About, etc.)
+├── assets/
+│   ├── img/             # Avatars, favicons, lab screenshots
+│   ├── css/             # Theme styles
+│   └── js/              # Theme scripts
+├── _config.yml          # Site configuration
+└── .github/workflows/   # GitHub Pages deployment
+```
+
+## Run Locally
+
+**Requirements:** Ruby 3.x, Bundler, Node.js (LTS)
+
+```bash
+# Install dependencies
+bundle install
+npm install
+
+# Build theme assets
+npm run build
+
+# Serve the site (development)
+bundle exec jekyll serve
+```
+
+Open [http://localhost:4000](http://localhost:4000) in your browser.
+
+## Deploy
+
+Pushing to the `main` branch triggers the GitHub Actions workflow, which builds the site and publishes it to GitHub Pages at [aaronsecure.github.io](https://aaronsecure.github.io/).
+
+## Connect
+
+- **Portfolio:** [aaronsecure.github.io](https://aaronsecure.github.io/)
+- **GitHub:** [@AaronSecure](https://github.com/AaronSecure)
+- **X (Twitter):** [@Aaronprompt](https://twitter.com/aaronprompt)
+- **Email:** [ituraaron77@gmail.com](mailto:ituraaron77@gmail.com)
 
 ## License
 
-This project is published under the [MIT License][license].
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[ci]: https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml?query=event%3Apush+branch%3Amaster
-[codacy]: https://app.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
-[license]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE
-[open-container]: https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/cotes2020/jekyll-theme-chirpy
-[jekyllrb]: https://jekyllrb.com/
-[clipartmax]: https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/
-[demo]: https://cotes2020.github.io/chirpy-demo/
-[wiki]: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
-[contribute-guide]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/docs/CONTRIBUTING.md
-[contributors]: https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors
-[lib]: https://github.com/cotes2020/chirpy-static-assets
-[vscode]: https://code.visualstudio.com/
-[jetbrains]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
+Site content and lab write-ups are © Aaron Itur. The Jekyll theme is based on [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) (MIT License).
