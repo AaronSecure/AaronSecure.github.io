@@ -3,6 +3,9 @@ title: Kioptrix 5 — FreeBSD Compromise
 date: 2026-03-22 10:00:00 +0300
 categories: [Cybersecurity, Web Exploitation]
 tags: [kioptrix, freebsd, lfi, privilege-escalation, pentest]
+image:
+path: /assets/img/kioptrix-5/KIOP5FREEBSD.jpg
+alt: KIPTRIX 5 FREEBSD
 ---
 
 ## 1. Executive Summary
