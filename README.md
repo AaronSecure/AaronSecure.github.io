@@ -42,6 +42,17 @@ End-to-end penetration test of the PwnLab: init CTF target, from unauthenticated
 
 **Tools used:** Nmap, Burp Suite, Nikto, Netcat, MySQL CLI, CyberChef
 
+### [Kioptrix 4 — LigGoat Web Compromise](https://aaronsecure.github.io/posts/kioptrix-4-penetration-test/)
+
+End-to-end penetration test of Kioptrix Level 4, from host discovery through root on Ubuntu:
+
+- SQL injection and IDOR on the LigGoat login portal
+- SSH access and LigGoat restricted-shell breakout
+- Empty MySQL root credentials in PHP source
+- Privilege escalation via MySQL UDF `sys_exec`
+
+**Tools used:** Netdiscover, Nmap, Gobuster, Firefox, SSH, MySQL CLI
+
 ### [Kioptrix 5 — FreeBSD Compromise](https://aaronsecure.github.io/posts/kioptrix-5-penetration-test/)
 
 End-to-end penetration test of Kioptrix Level 5, from host discovery through root on FreeBSD 9.0:

@@ -51,6 +51,7 @@ Motivated Information Security professional seeking to apply programming, networ
 ## Featured Labs
 
 - [PWNLAB_INIT — Full System Compromise](/posts/PWNLABINIT-enumeration/)
+- [Kioptrix 4 — LigGoat Web Compromise](/posts/kioptrix-4-penetration-test/)
 - [Kioptrix 5 — FreeBSD Compromise](/posts/kioptrix-5-penetration-test/)
 
 ## Languages
